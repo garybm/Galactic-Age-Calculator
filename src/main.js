@@ -23,7 +23,7 @@
 
   //Jupiter
   function jupiterAge(dateString) {
-    const jupiterAge = getAge(dateString) /11.86;
+    const jupiterAge = getAge(dateString) / 11.86;
     return Math.round(jupiterAge);
   }
 
@@ -52,7 +52,7 @@
       $("#jupiter").append(jupiter);
       const venus = venusAge(newDate);
       $("#venus").append(venus);
-      const mercury = mercuryAge(newDate);
+      const mercury = mecuryAge(newDate);
       $("#mercury").append(mercury);
     });
 });
