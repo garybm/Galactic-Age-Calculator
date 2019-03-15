@@ -5,24 +5,20 @@
   import './sass/styles.scss';
 
 
-  export class Birthday {
+   class Birthday {
     constructor(birthday){
-      this.birthday = birthday;
+      this.month = month;
+      this.day = day;
+      this.year = year;
+      console.log(this.month, this.day, this.year);
     }
+  }
+    const birthday = new Birthday (28, 1, 1984);
 
-     calculateAge(){
-      const today_date = new Date();
-      console.log("today_date");
-      const today_year = today_date.getFullYear();
-      const today_month = today_date.getMonth();
-      const today_day = today_date.getDate();
-      const age = today_year - birth_year;
 
-      if ( today_month < (birth_month - 1))
-      {
-          age--;
-      }
-      if (((birth_month - 1) == today_month) && (today_day < birth_day))
-      {
-          age--;
-      }
+   function calculateAge(){
+    const currentDate= new Date();
+    const today_year = currentDate.getFullYear();
+    const today_month = currentDate.getMonth();
+    const today_day = currentDate.getDate();
+    // const birthday_year = this.birthday;
