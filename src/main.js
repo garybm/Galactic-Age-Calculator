@@ -1,22 +1,24 @@
   import $ from 'jquery';
-  // import 'bootstrap';
-  // import 'bootstrap/dist/css/bootstrap.min.css';
-  // import './css/styles.css';s
-  // import './sass/styles.scss';
-  import { YourBirthday  } from './../src/age.js';
+  // import { getAge } from './../src/age.js';
 
 
+  function getAge(dateString) {
+      const today = new Date();
+      const birthDate = new Date(dateString);
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const month = today.getMonth() - birthDate.getMonth();
+      if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+      }
+      return age;
+  }
 
-    $(document).ready( function() {
-      $(".date").submit(function(event) {
-        event.preventDefault();
-        const month = $('#month').val();
-        const day = $('#day').val();
-        const year = $('#year').val();
-        const birthday = month.concat(" ", day, ", ", year);
-        const output = YourBirthday (newDate);
-        $(".output").text(output);
-
-      })
-
-    })
+  $(document).ready( function() {
+    $(".date").submit(function(event) {
+      event.preventDefault();
+      const newDate = $('#date-input').val();
+      const output = getAge(newDate);
+      console.log(output);
+      $(".output").text(output);
+      });
+});

@@ -1,29 +1,3 @@
-class YourBirthday {
-
-  constructor(){
-    this.month = month;
-    this.day = day;
-    this.year = year;
-    }
-  }
-
-  const newBirthday = new YourBirthday ();
-  console.log(newBirthday);
-
-
-  function getAge(dateString) {
-      var today = new Date();
-      var birthDate = new Date(newBirthday);
-      var age = today.getFullYear() - birthDate.getFullYear();
-      var month = today.getMonth() - birthDate.getMonth();
-      if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
-          age--;
-      }
-      return age;
-  }
-
-  console.log('age: ' + getAge("1984/06/17"));
-
 
   export class userDate {
   constructor(month, date, year) {
@@ -57,7 +31,7 @@ class YourBirthday {
       return 'month exceeds 12';
     }
   }
-
+//DO NOT need this funtion for AGE calculation.
   getDay() {
     const days = ["Sunday", "Monday", "Tuesady", "Wednesday", "Thursday", "Friday", "Saturday"]
     const validMonth = (this.month - 1)
@@ -93,3 +67,19 @@ export function dayConvert(date) {
     alert("Something went wrong. Please make sure you entered only numbers!");
   }
 }
+
+
+//Function to calculate the AGE
+
+  function getAge(dateString) {
+      var today = new Date();
+      var birthDate = new Date(dateString);
+      var age = today.getFullYear() - birthDate.getFullYear();
+      var month = today.getMonth() - birthDate.getMonth();
+      if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+      }
+      return age;
+  }
+
+  // console.log('age: ' + getAge("1984/06/17"));
