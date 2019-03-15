@@ -72,14 +72,44 @@ export function dayConvert(date) {
 //Function to calculate the AGE
 
   function getAge(dateString) {
-      var today = new Date();
-      var birthDate = new Date(dateString);
-      var age = today.getFullYear() - birthDate.getFullYear();
-      var month = today.getMonth() - birthDate.getMonth();
+      const today = new Date();
+      const birthDate = new Date(dateString);
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const month = today.getMonth() - birthDate.getMonth();
       if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
           age--;
       }
       return age;
   }
 
-  // console.log('age: ' + getAge("1984/06/17"));
+  console.log('age: ' + getAge("1984/06/17"));
+
+  //Mercury Age
+  const mercuryAge = getAge(dateString) / .24;
+  return Math.round(mercuryAge);
+
+  //Venus
+  const venusAge = getAge(dateString) / .62;
+  return Math.round(venusAge);
+
+  //Mars
+
+  const marsAge = getAge(dateString) / 1.88;
+  return Math.round(marsAge);
+
+  //Jupiter
+  const jupiterAge = getAge(dateString) /11.86;
+  return Math.round(jupiterAge);
+
+
+
+
+
+
+
+
+
+
+
+
+  console.log('age: ' + getAge("1984/06/17"));
