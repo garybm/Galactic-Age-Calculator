@@ -15,30 +15,15 @@ module.exports = {
   },
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
-    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'project title goes here',
+      title: 'Ping Pong',
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    new CleanWebpackPlugin(['dist'])
   ],
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
-      {
-      test: /\.scss$/,
-      use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-      ]
-      },
       {
         test: /\.(gif|png|jpe?g)$/,
         use: [
@@ -58,11 +43,19 @@ module.exports = {
         ]
       },
       {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
         test: /\.js$/,
         exclude: [
-        /node_modules/,
-        /spec/,
-      ],
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
       },
       {
@@ -73,7 +66,7 @@ module.exports = {
         ],
         loader: "babel-loader",
         options: {
-        presets: ['es2015']
+          presets: ['es2015']
         }
       }
     ]
