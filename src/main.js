@@ -14,45 +14,45 @@
       return age;
     }
 
-    function venusAge(dateString) {
-    const venusAge = getAge(dateString) / .62;
-    Math.round(venusAge);
-    console.log(venusAge);
+    //Mercury
+    function mecuryAge(dateString) {
+    const mercuryAge = getAge(dateString) / .24;
+    return Math.round(mercuryAge);
+  }
+
+
+  //Jupiter
+  function jupiterAge(dateString) {
+    const jupiterAge = getAge(dateString) /11.86;
+    return Math.round(jupiterAge);
+  }
+
+    //Mars
+
+    function marsAge(dateString) {
+    const marsAge = getAge(dateString) / 1.88;
+    return Math.round(marsAge);
     }
 
+    //Venus
+    function venusAge(dateString) {
+      const venusAge = getAge(dateString) / .62;
+      Math.round(venusAge);
+    }
 
   $(document).ready( function() {
     $(".date").submit(function(event) {
       event.preventDefault();
       const newDate = $('#date-input').val();
       const output = getAge(newDate);
-      const venusAge1 = venusAge(newDate);
-      $(".output").text(output);
-      $(".output").text(venusAge1);
-
+      $("#age").append(output);
+      const mars = marsAge(newDate);
+      $("#mars").append(mars);
+      const jupiter = jupiterAge(newDate);
+      $("#jupiter").append(jupiter);
+      const venus = venusAge(newDate);
+      $("#venus").append(venus);
+      const mercury = mercuryAge(newDate);
+      $("#mercury").append(mercury);
     });
 });
-
-
-// function mercuryAge(dateString) {
-  //   let mercuryAge = getAge() / 0.24;
-  //   return Math.round(mercuryAlive);
-  // }
-
-  // //Mercury Age
-  // const mercuryAge = getAge(dateString) / .24;
-  //  Math.round(mercuryAge);
-  //
-  // //Venus
-  // const venusAge = getAge(dateString) / .62;
-  //  Math.round(venusAge);
-  //
-  // //Mars
-  //
-  // const marsAge = getAge(dateString) / 1.88;
-  // Math.round(marsAge);
-  //
-  // //Jupiter
-  // const jupiterAge = getAge(dateString) / 11.86;
-  // Math.round(jupiterAge);
-  // console.log(jupiterAge);
