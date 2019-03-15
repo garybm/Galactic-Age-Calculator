@@ -3,7 +3,7 @@
   // import 'bootstrap/dist/css/bootstrap.min.css';
   // import './css/styles.css';s
   // import './sass/styles.scss';
-  import { YourBirthday  } from './age.js';
+  import { YourBirthday  } from './../src/age.js';
 
 
 
