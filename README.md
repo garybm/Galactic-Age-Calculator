@@ -1,13 +1,32 @@
-**Specs
+#  Galactic Age Calculator
 
-* Birthday return in seconds
+_Published_  2/15/2019 <br>
+_Author_ **Gary Bermudez**
 
-* Age returns in years
+### Description
+Javascript objects allowing a User to input a birthday and find out life expectancy and age on different planets.
+Used to practice testing with Jasmine and Karma
 
-* Age on earth returns age on Mercury (A Mercury year is .24 Earth years.)
+### Installation
+* Clone from https://github.com/garybm/independent-project1
+* Run `$ npm install`
+* Use `$ npm run test` to view testing in Karma - Chrome Browser
 
-* Age on earth returns age on Venus (A Venus year is .62 Earth years.)
+### Development Specs
 
-* Age on earth returns age on Mars (A Mars year is 1.88 Earth years.)
+Specification | Input | Output
+------------- | ----- | ------
+Givin a birthday should be able to determine how old they are. | June, 17 1984 | 34
+Can Determine Age on Mecury based on that age | 34 | 120
+Can Determine Age on Venus based on that age | 34 | 46
+Can Determine Age on Mars based on that age | 34 | 15
+Can Determine Age on Jupiter based on that age | 34 | 2
+Can give the user life expectancy based on two options | Gender - Male and Country - Japan | 78.6 years old
+Can compare age and life expectancy on a given planet to see if they have already lived past thier life expectancy | Life-Expectancy on Mecury | You've lived 42 years past your life expectancy
 
-* Age on earth returns age on Jupiter (A Jupiter year is 11.86 Earth years.)
+### Known Bugs
+* None identified
+
+### Technologies Used
+* Webpack
+* Tested with Karma and Jasmine
