@@ -17,12 +17,12 @@ Used to practice testing with Jasmine and Karma
 Specification | Input | Output
 ------------- | ----- | ------
 Givin a birthday should be able to determine how old they are. | June, 17 1984 | 34
-Can Determine Age on Mecury based on that age | 34 | 120
-Can Determine Age on Venus based on that age | 34 | 46
-Can Determine Age on Mars based on that age | 34 | 15
-Can Determine Age on Jupiter based on that age | 34 | 2
+Can Determine Age on Mercury based on that age | 34 | 142
+Can Determine Age on Venus based on that age | 34 | 55
+Can Determine Age on Mars based on that age | 34 | 18
+Can Determine Age on Jupiter based on that age | 34 | 3
 Can give the user life expectancy based on two options | Gender - Male and Country - Japan | 78.6 years old
-Can compare age and life expectancy on a given planet to see if they have already lived past thier life expectancy | Life-Expectancy on Mecury | You've lived 42 years past your life expectancy
+Can compare age and life expectancy on a given planet to see if they have already lived past their life expectancy | Life-Expectancy on Mercury | You've lived 42 years past your life expectancy
 
 ### Known Bugs
 * None identified
