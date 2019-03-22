@@ -13,17 +13,27 @@ export function getAge(dateString) {
     return age;
   }
 
-  //Mercury Age
+  //LIFE EXPECTANCY
+
+  export function liveLong(dateString) {
+    const lifeExpectAll = 78;
+    let test = getAge(dateString);
+    const leftToLive = lifeExpectAll - test;
+    return ("You are expected to live for " + leftToLive + " more years!");
+  }
+
+//Mercury
+
   export function mercuryAge(dateString) {
     const mercuryAge = getAge(dateString) / .24;
     return Math.round(mercuryAge);
-}
+  }
 
   //Venus
   export function venusAge(dateString) {
     const venusAge = getAge(dateString) / .62;
     return Math.round(venusAge);
- }
+  }
 
   //Mars
 

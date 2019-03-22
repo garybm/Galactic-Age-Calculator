@@ -4,6 +4,7 @@
   import { venusAge } from './../src/age.js';
   import { marsAge } from './../src/age.js';
   import { jupiterAge } from './../src/age.js';
+  import { liveLong } from './../src/age.js';
 
 
   $(document).ready( function() {
@@ -20,5 +21,7 @@
       $("#venus").append(venus);
       const mercury = mercuryAge(newDate);
       $("#mercury").append(mercury);
+      const lifeToLive = liveLong(newDate);
+      $("#leftToLive").append(lifeToLive);
     });
 });

@@ -21,8 +21,7 @@ Can Determine Age on Mercury based on that age | 34 | 142
 Can Determine Age on Venus based on that age | 34 | 55
 Can Determine Age on Mars based on that age | 34 | 18
 Can Determine Age on Jupiter based on that age | 34 | 3
-Can give the user life expectancy based on two options | Gender - Male and Country - Japan | 78.6 years old
-Can compare age and life expectancy on a given planet to see if they have already lived past their life expectancy | Life-Expectancy on Mercury | You've lived 42 years past your life expectancy
+Can give the user life expectancy based on 78 years 
 
 ### Known Bugs
 * None identified
